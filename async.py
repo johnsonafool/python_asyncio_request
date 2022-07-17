@@ -25,5 +25,6 @@ for i in range(10):
     task = loop.create_task(send_req(url))
     tasks.append(task)
 
-# loop.run_until_complete(asyncio.wait(tasks))
 print(tasks)
+
+loop.run_until_complete(asyncio.wait(tasks))
